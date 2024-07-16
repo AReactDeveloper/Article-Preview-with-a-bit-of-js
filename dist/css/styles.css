@@ -1,0 +1,182 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+:root {
+  /* Layout */
+  --bp-mobile: 375px;
+  --bp-desktop: 1440px;
+  /* Colors */
+  --clr-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --clr-desaturated-dark-blue: hsl(214, 17%, 51%);
+  --clr-grayish-blue: hsl(212, 23%, 69%);
+  --clr-light-grayish-blue: hsl(210, 46%, 95%);
+  --clr-white: hsl(0,0%,100%);
+  /* Typography */
+  --fs-primary: 12px;
+  --fs-secondary: 1.2rem; /* You can adjust this value as needed */
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-body: 400; /* Default body font weight */
+  /* Font Family */
+  --ff-primary: "Manrope", sans-serif;
+}
+
+/* Eric Meyer’s Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a consistent base font size */
+html {
+  font-size: 100%;
+}
+
+/* Ensure images don’t have extra space below */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove link underlines */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ensure headings are not affected by base font size */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: var(--clr-light-grayish-blue);
+  font-family: var(--ff-primary);
+}
+
+.card {
+  position: relative;
+  max-width: 730px;
+  min-height: 280px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 10px 10px 15px rgba(1, 1, 1, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card-content {
+  padding: 40px;
+}
+.card-content h2 a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  color: var(--clr-very-dark-grayish-blue);
+}
+.card-content p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.card-content-user-box {
+  display: flex;
+  justify-content: space-between;
+}
+.card-content-user-box-info {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+.card-content-user-box-info p {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+.card-content-user-box-info span {
+  margin-left: 20px;
+  color: var(--clr-very-dark-grayish-blue);
+}
+.card-content-user-box img {
+  width: 40px;
+  height: 40px;
+  height: auto;
+  border-radius: 50%;
+  display: inline-block;
+}
+.card-content-user-box-button a {
+  background-color: gray;
+  padding: 10px;
+}
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+@media (max-width: 650px) {
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .card {
+    grid-template-columns: 1fr;
+  }
+}
+.share-menu {
+  position: absolute;
+  bottom: 100px;
+  right: 0;
+  display: none;
+  align-items: center;
+  padding: 0px 20px;
+  background-color: var(--clr-very-dark-grayish-blue);
+  color: var(--clr-light-grayish-blue);
+  border-radius: 5px;
+}
+.share-menu img {
+  width: 20px;
+}
+.share-menu ul li {
+  margin-left: 5px;
+}
+.share-menu ul li p {
+  padding-right: 20px;
+  letter-spacing: 1.2px;
+  font-size: 16px;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.share-button {
+  border-radius: 50%;
+  border: 0;
+  padding: 10px;
+}
+.share-button img {
+  width: 25px;
+}
+.share-button:hover {
+  background-color: var(--clr-very-dark-grayish-blue);
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.active {
+  display: flex !important;
+}
+
+/*# sourceMappingURL=styles.css.map */

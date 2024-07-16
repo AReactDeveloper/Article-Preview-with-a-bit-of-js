@@ -1,0 +1,123 @@
+
+@use 'root';
+@use 'reset';
+@use 'base';
+
+
+.card{
+    position: relative;
+    max-width: 730px;
+    min-height: 280px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 10px 10px 15px rgba(1,1,1,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    &-content{
+        padding: 40px;
+        & h2 a{
+            font-size: 1.2rem;
+            font-weight: bold;
+            line-height: 1.5;
+            color: var(--clr-very-dark-grayish-blue);
+            
+        }
+        & p{
+            font-size: 13px;
+            line-height: 1.5;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+        &-user-box{
+            display: flex;
+            justify-content: space-between;
+            
+            &-info{
+                display: flex;
+                align-items: start;
+                justify-content: start;
+                & p{
+                    margin: 0;
+                    padding: 0;
+                    font-size: 13px;
+                }
+                & span{
+                    margin-left: 20px;
+                    color: var(--clr-very-dark-grayish-blue);
+                }
+            }
+            & img{
+                width: 40px;
+                height: 40px;
+                height: auto;
+                border-radius: 50%;
+                display: inline-block;
+            }
+            &-button a{
+                background-color: gray;
+                padding: 10px;
+            }
+        }
+    }
+    &-img img{
+        width: 100%;
+        height: 100%;
+        object-fit:fill;
+    }
+}
+
+@media (max-width:650px) {
+    .wrapper{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .card{
+        grid-template-columns: 1fr;
+    }
+}
+
+.share-menu{
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    display: none;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: var(--clr-very-dark-grayish-blue);
+    color: var(--clr-light-grayish-blue);
+    border-radius: 5px;
+    & img{
+        width: 20px;
+    }
+    & ul li{
+        margin-left: 5px;
+    }
+    & ul li p{
+        padding-right: 20px;
+        letter-spacing: 1.2px;
+        font-size: 16px;
+        font-weight: 200;
+        text-transform: uppercase;
+    }
+}
+
+.share-button{
+    border-radius: 50%;
+    border: 0;
+    padding: 10px;
+    & img{
+        width: 25px;
+    }
+    &:hover{
+        background-color: var(--clr-very-dark-grayish-blue);
+    }
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
+.active{
+    display:flex !important;
+}
